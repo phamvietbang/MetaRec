@@ -1,7 +1,7 @@
 # Import packages
-from tensorflow.keras.layers import Input, Dense, Dropout
-from tensorflow.keras.models import Model
-from tensorflow.keras import regularizers
+from keras.layers import Input, Dense, Dropout
+from keras.models import Model
+from keras import regularizers
 
 
 def Deep_AE_model(X, layers, activation, last_activation, dropout, regularizer_encode,

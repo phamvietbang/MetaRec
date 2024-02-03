@@ -54,15 +54,15 @@ def preprocess(data_path, save_path, stat_path, sep, train_ratio=0.8, binarize_t
 
     num_items_by_user = data.groupby('user', as_index=False).size()
     num_users_by_item = data.groupby('item', as_index=False).size()
-
     # Assign new user IDs
     print('Assign new user id...')
-    user_frame = num_items_by_user.to_frame()
-    user_frame.columns = ['item_cnt']
+    user_frame = pd.DataFrame({'item_cnt': list(num_items_by_user['size'])})
+    # num_items_by_user.to_frame()
+    # user_frame.columns = ['item_cnt']
 
     if order_by_popularity:
         user_frame = user_frame.sort_values(by='item_cnt', ascending=False)
-    user_frame['new_id'] = list(range(num_users))
+    user_frame['new_id'] = [i+1 for i in range(num_users)]
 
     # Add old user IDs into new consecutive user IDs
     frame_dict = user_frame.to_dict()
@@ -70,16 +70,17 @@ def preprocess(data_path, save_path, stat_path, sep, train_ratio=0.8, binarize_t
     user_frame = user_frame.set_index('new_id')
     user_to_num_items = user_frame.to_dict()['item_cnt']
 
-    data.user = [user_id_dict[x] for x in data.user.tolist()]
+    data.user = [user_id_dict[x-1] for x in data.user.tolist()]
 
     # Assign new item IDs
     print('Assign new item id...')
-    item_frame = num_users_by_item.to_frame()
-    item_frame.columns = ['user_cnt']
+    item_frame = pd.DataFrame({'user_cnt': list(num_users_by_item['size'])})
+    # item_frame = num_users_by_item.to_frame()
+    # item_frame.columns = ['user_cnt']
 
     if order_by_popularity:
         item_frame = item_frame.sort_values(by='user_cnt', ascending=False)
-    item_frame['new_id'] = range(num_items)
+    item_frame['new_id'] = [i+1 for i in range(num_items)]
 
     # Add old item IDs into new consecutive item IDs
     frame_dict = item_frame.to_dict()
@@ -87,7 +88,7 @@ def preprocess(data_path, save_path, stat_path, sep, train_ratio=0.8, binarize_t
     item_frame = item_frame.set_index('new_id')
     item_to_num_users = item_frame.to_dict()['user_cnt']
 
-    data.item = [item_id_dict[x] for x in data.item.tolist()]
+    data.item = [item_id_dict.get(x-1, x) for x in data.item.tolist()]
 
     num_users, num_items = len(user_id_dict), len(item_id_dict)
     num_ratings = len(data)

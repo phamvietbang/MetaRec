@@ -5,8 +5,8 @@ from comet_ml import Experiment
 import pandas as pd
 from sklearn.model_selection import train_test_split
 import tensorflow as tf
-from tensorflow.keras.optimizers import SGD
-from tensorflow.keras.callbacks import EarlyStopping
+from keras.optimizers import SGD
+from keras.callbacks import EarlyStopping
 
 # Import utility scripts
 from data_processor import preprocess_data

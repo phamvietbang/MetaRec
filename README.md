@@ -17,28 +17,6 @@ The data contains 1,000,209 anonymous ratings of approximately 3,900 movies made
 
 # Research Models
 
-## [Matrix Factorization](https://github.com/khanhnamle1994/transfer-rec/tree/master/Matrix-Factorization-Experiments)
-
-Here are the 7 different Matrix Factorization models for Collaborative Filtering:
-
-* [Vanilla Matrix Factorization](https://github.com/khanhnamle1994/transfer-rec/tree/master/Matrix-Factorization-Experiments/Vanilla-MF)
-* [Matrix Factorization with Biases](https://github.com/khanhnamle1994/transfer-rec/tree/master/Matrix-Factorization-Experiments/MF-Biases)
-* [Matrix Factorization with Side Features](https://github.com/khanhnamle1994/transfer-rec/tree/master/Matrix-Factorization-Experiments/MF-Side-Features)
-* [Matrix Factorization with Temporal Features](https://github.com/khanhnamle1994/transfer-rec/tree/master/Matrix-Factorization-Experiments/MF-Temporal-Features)
-* [Factorization Machines](https://github.com/khanhnamle1994/transfer-rec/tree/master/Matrix-Factorization-Experiments/Factorization-Machines)
-* [Matrix Factorization with Mixture of Tastes](https://github.com/khanhnamle1994/transfer-rec/tree/master/Matrix-Factorization-Experiments/MF-Mixture-Tastes)
-* [Variational Matrix Factorization](https://github.com/khanhnamle1994/transfer-rec/tree/master/Matrix-Factorization-Experiments/Variational-MF)
-
-## [Multi-Layer Perceptron](https://github.com/khanhnamle1994/transfer-rec/tree/master/Multilayer-Perceptron-Experiments)
-
-Here are the 5 different Multilayer Perceptron models for Collaborative Filtering:
-
-* [Wide and Deep Learning](https://github.com/khanhnamle1994/transfer-rec/tree/master/Multilayer-Perceptron-Experiments/Wide-and-Deep-PyTorch) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Multilayer-Perceptron-Experiments/Wide-and-Deep-Learning-for-Recommendation-Systems.pdf))
-* [Deep Factorization Machines](https://github.com/khanhnamle1994/transfer-rec/tree/master/Multilayer-Perceptron-Experiments/DeepFM-PyTorch) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Multilayer-Perceptron-Experiments/DeepFM-A-Factorization-Machine-Based-Neural-Network-For-CTR-Prediction.pdf))
-* [Extreme Deep Factorization Machines](https://github.com/khanhnamle1994/transfer-rec/tree/master/Multilayer-Perceptron-Experiments/xDeepFM-PyTorch) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Multilayer-Perceptron-Experiments/xDeepFM-Combining-Explicit-and-Implicit-Feature-Interactions-For-Recommender-Systems.pdf))
-* [Neural Factorization Machines](https://github.com/khanhnamle1994/transfer-rec/tree/master/Multilayer-Perceptron-Experiments/Neural-FM-PyTorch) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Multilayer-Perceptron-Experiments/Neural-Factorization-Machines-For-Sparse-Predictive-Analytics.pdf))
-* [Neural Collaborative Filtering](https://github.com/khanhnamle1994/transfer-rec/tree/master/Multilayer-Perceptron-Experiments/Neural-CF-PyTorch-Version2) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Multilayer-Perceptron-Experiments/Neural-Collaborative-Filtering.pdf))
-
 ## [Autoencoders](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments)
 
 Here are the 6 different Autoencoders models for Collaborative Filtering:
@@ -49,35 +27,3 @@ Here are the 6 different Autoencoders models for Collaborative Filtering:
 * [Multinomial Variational Autoencoders](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/VAE-PyTorch) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/Variational-Autoencoders-for-Collaborative-Filtering.pdf))
 * [Sequential Variational Autoencoders](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/SVAE-PyTorch) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/Sequential-Variational-Autoencoders-for-Collaborative-Filtering.pdf))
 * [Embarrassingly Shallow Autoencoders](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/ESAE-PyTorch) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/Embarrassingly-Shallow-Autoencoders-for-Sparse-Data.pdf))
-
-## [Boltzmann Machines](https://github.com/khanhnamle1994/transfer-rec/tree/master/Boltzmann-Machines-Experiments)
-
-Here are the 3 different Boltzmann Machines models for Collaborative Filtering:
-
-* [Restricted Boltzmann Machines](https://github.com/khanhnamle1994/transfer-rec/tree/master/Boltzmann-Machines-Experiments/RBM-CF-PyTorch) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Boltzmann-Machines-Experiments/Restricted-Boltzmann-Machines-For-Collaborative-Filtering.pdf))
-* [Explainable Restricted Boltzmann Machines](https://github.com/khanhnamle1994/transfer-rec/tree/master/Boltzmann-Machines-Experiments/Explainable-RBM-CF-TensorFlow) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Boltzmann-Machines-Experiments/Explainable-Restricted-Boltzmann-Machines-For-Collaborative-Filtering.pdf))
-* [Neural Autoregressive Distribution Estimator](https://github.com/khanhnamle1994/transfer-rec/tree/master/Boltzmann-Machines-Experiments/NADE-CF-Keras) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Boltzmann-Machines-Experiments/Neural-Autoregressive-Distribution-Estimator-For-Collaborative-Filtering.pdf))
-
-# Production App
-
-## [Django Web Service](https://github.com/khanhnamle1994/transfer-rec/tree/master/Django-Web-Service)
-
-Here I built a recommendation web service with Python 3.6 and Django 2.2.4. It has these properties:
-- Can handle many API endpoints,
-- Each API endpoint can have several research algorithms with different versions,
-- Research code and artifacts (files with model parameters) are stored in the code repository (git),
-- Supports fast deployments and continuous integration (tests for both: server and research code),
-- Supports monitoring and algorithm diagnostic (support A/B tests),
-- Is scalable (deployed with containers),
-- Has a user interface.
-
-# Blog Posts
-
-I have written a series of blog posts documenting my experiments on [my website](https://jameskle.com/writes/category/Recommendation+System):
-- [Part 1: An Executive Guide to Building Recommendation System](https://jameskle.com/writes/rec-sys-part-1)
-- [Part 2: The 10 Categories of Deep Recommendation Systems That Academic Researchers Should Pay Attention To](https://jameskle.com/writes/rec-sys-part-2)
-- [Part 3: The 6 Research Directions of Deep Recommendation Systems That Will Change The Game](https://jameskle.com/writes/rec-sys-part-3)
-- [Part 4: The 7 Variants of Matrix Factorization for Collaborative Filtering](https://jameskle.com/writes/rec-sys-part-4)
-- [Part 5: The 5 Variants of Multi-Layer Perceptron for Collaborative Filtering](https://jameskle.com/writes/rec-sys-part-5)
-- [Part 6: The 6 Variants of Autoencoders for Collaborative Filtering](https://jameskle.com/writes/rec-sys-part-6)
-- [Part 7: The 3 Variants of Boltzmann Machines for Collaborative Filtering](https://jameskle.com/writes/rec-sys-part-7)
